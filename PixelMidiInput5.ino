@@ -1,15 +1,14 @@
-/* Receive Incoming USB MIDI by reading data.  This approach
-   gives you access to incoming MIDI message data, but requires
-   more work to use that data.  For the simpler function-based
-   approach, see InputFunctionsBasic and InputFunctionsComplete.
 
-   Use the Arduino Serial Monitor to view the messages
-   as Teensy receives them by USB MIDI
+/*RGB Addressable LED Midi Visualizer
 
-   You must select MIDI from the "Tools > USB Type" menu
+This project was created by Mark DeSimone, using an example from https://www.pjrc.com/teensy/td_midi.html. 
 
-   This example code is in the public domain.
+Its original purpose is for controlling a 12 x 6 RGB LED  matrix similar to what's seen in the movie "Close Encounters of the Third Kind" 
+but it should be adaptable to other configurations like the Adafruit Neopixel rings, or a simple strip of addressable LEDs - perhaps attached to a midi controller.
+It should work with a Teensy microcontroller, which can function as a USB Human interface device, and be visible as a USB midi device to your computer.
+
 */
+
 #include "FastLED.h" //the FastLED library that drives all the LED data formatting. This project assumes you're using a strand of neoPixels
 
 
